@@ -1,0 +1,36 @@
+import Banner from '../components/Banner'
+import HumanAI from '../components/HumanAI'
+import Services from '../components/Services'
+import Reviews from '../components/Reviews'
+import { HiOutlineMail } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
+import Portfolio from '../components/Portfolio';
+
+
+function HomePage() {
+    return (
+        <div>
+            <Banner />
+            <HumanAI />
+            <Services />
+            <Reviews />
+            <Portfolio /> 
+            <Link
+                to="/contact"
+                className="fixed bottom-24 right-6 flex items-center gap-2 bg-gradient-to-r from-red-500 to-cyan-500 hover:from-red-600 hover:to-cyan-600 text-white px-4 py-2 pr-5 rounded-full shadow-lg hover:scale-105 transition-transform z-50 group"
+                title="Contact Us"
+            >
+                <div className="p-2 bg-white/20 rounded-full">
+                    <HiOutlineMail size={24} className="text-white" />
+                </div>
+                <span className="font-semibold hidden md:inline text-white tracking-wide group-hover:underline">
+                    Contact Us
+                </span>
+            </Link>
+
+
+        </div>
+    )
+}
+
+export default HomePage
